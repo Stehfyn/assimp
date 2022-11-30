@@ -2,7 +2,8 @@ project "assimp"
   kind "StaticLib"
   language "C++"
   cppdialect "C++17"
-  staticruntime "on"
+  --staticruntime "on"
+  staticruntime "off"
 
   targetdir ("bin/" .. outputdir .. "/%{prj.name}")
   objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -57,7 +58,7 @@ project "assimp"
       "ASSIMP_BUILD_NO_3MF_IMPORTER",
       "ASSIMP_BUILD_NO_X3D_IMPORTER",
       "ASSIMP_BUILD_NO_MMD_IMPORTER",
-      
+
       "ASSIMP_BUILD_NO_STEP_EXPORTER",
       "ASSIMP_BUILD_NO_SIB_IMPORTER",
 
